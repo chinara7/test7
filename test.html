@@ -7,62 +7,47 @@
     <title>Git hub lesson</title>
     <style>
         body{
-            display: flex;
-            justify-content: center;
+            background: url(room.jpg) center no-repeat;
+            background-size: cover;
+            background-position: center;
             min-height: 100vh;
+           
+        }
+        .container{
+            display:flex;
+            justify-content: center;
             align-items: center;
+            height: 100vh;
         }
-        table{
-            border-radius: 4px;
-            text-align: center;
-            border: 1px solid #000;
-            padding: 20px;
-            margin: 0 auto;
-       
-        }
-        table tr th{
-            border: 1px solid black;
-            background-color: red;
+        .btn{
+            font-size: 24px;
+            border: 2px solid #fff;
+            background-color: rgb(0, 0, 0);
             color: #fff;
+            border-radius: 3px;
+            padding: 10px ;
+            cursor: pointer;
+            width: 150px !important;
         }
-        table tr td{
-            border: 1px solid black;
+        .btnClass{
+            background-color: white;
+            color: black;
         }
-
+   
     </style>
 </head>
 <body>
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>NAME</th>
-            <th>SURNAME</th>
-            <th>AGE</th>
-        </tr>
-        <tr>
-            <td>219</td>
-            <td>Turkel</td>
-            <td>Hetemli</td>
-            <td>20</td>
-        </tr>
-        <tr>
-            <td>542</td>
-            <td>Xanim</td>
-            <td>Huseynova</td>
-            <td>23</td>
-        </tr>
-        <tr>
-            <td>123</td>
-            <td>Gultac</td>
-            <td>Memmedova</td>
-            <td>43</td>
-        </tr>
-        <tr>
-            <td>667</td>
-            <td>Murad</td>
-            <td>Huseynli</td>
-            <td>18</td>
-        </tr>
-    </table>
+    <div class="container" id="cont">
+        <button type="button" class="btn" id="btn">Night mode</button>
+    </div>
+    <script>
+        const btn = document.querySelector('#btn');
+        const cont = document.querySelector('#cont');
+
+        btn.addEventListener('click',function nightMode(){
+            btn.innerHTML = 'Sun mode';
+            btn.classList.toggle('btnClass');
+        })
+    </script>
 </body>
 </html>
